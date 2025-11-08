@@ -5,7 +5,7 @@ services:
     ports:
       - "9000:8080"
     volumes:
-      - ./app:/app
+      - /tmp/devops_app:/app  
     environment:
       MONGODB_URL: mongodb://jenkins_mongo:27017
     depends_on:
@@ -15,7 +15,7 @@ services:
     image: mongo:6
     container_name: jenkins_mongo
     volumes:
-      - mongo_data:/data/db
+      - mongo_data:/data/db   
 
 volumes:
-  - /tmp/devops_app:/app
+  mongo_data:             
