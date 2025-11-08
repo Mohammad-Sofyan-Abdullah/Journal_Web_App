@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>My Journal</h1>
+        
+        <div class="journal-form">
+            <input type="text" id="title" placeholder="Journal Title">
+            <textarea id="content" placeholder="Write your thoughts..."></textarea>
+            <button id="submitBtn" onclick="submitJournal()">Save Journal</button>
+            <button id="cancelBtn" onclick="cancelEdit()" style="display: none;">Cancel Edit</button>
+        </div>
+
+        <div class="journal-list" id="journalList">
+            <!-- Journals will be displayed here -->
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
